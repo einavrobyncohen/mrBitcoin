@@ -1,0 +1,56 @@
+.contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .details {
+        display: flex;
+        flex-direction: column;
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .det-box {
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+            
+            .det {
+                font-family: main-l;
+                font-size: 18px;
+                color: white;
+                width: 320px;
+                padding-inline-start: 20px;
+                height: 50px;
+                background-color: #2950ab4b;
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-inline-end: 20px;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+        }
+
+        .actions {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            letter-spacing: .5px;
+        }
+        .actions >*{
+       
+            color: white;
+            font-family: main-l;
+            font-size: 17px;
+            text-decoration: underline;
+            background-color: transparent;
+            border: none;
+
+
+        }
+
+      
+    }
+}

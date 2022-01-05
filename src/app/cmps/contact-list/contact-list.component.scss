@@ -1,0 +1,9 @@
+.contact-list {
+    margin-top: 30px;
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    background-color: rgba(255, 255, 255, 0.212);
+    max-height: 75vh;
+    overflow-y: scroll;
+}

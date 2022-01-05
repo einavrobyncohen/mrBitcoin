@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #926FE9;
+    background: -moz-linear-gradient(-45deg, #926FE9 0%, #1052A4 82%, #6544C5 100%);
+    background: -webkit-linear-gradient(-45deg, #926FE9 0%, #1052A4 82%, #6544C5 100%);
+    background: linear-gradient(135deg, #926FE9 0%, #1052A4 82%, #6544C5 100%);
+
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+}
+
+html {
+    font-size: 16px;
+    font-family:  main-r;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+
+}
+
+a , a:active , a:focus{
+    text-decoration: none;
+    color: inherit;
+}
+
+a.active {
+    text-decoration: underline;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+//TYPOGRAPHY
+
+@font-face {
+    font-family: main-r;
+    src: url(../src/assets/fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: main-b;
+    src: url(../src/assets/fonts/Oswald-Bold.ttf);
+}
+
+
+@font-face {
+    font-family: main-l;
+    src: url(../src/assets/fonts/Oswald-Light.ttf);
+}
+
+@font-face {
+    font-family: main-r;
+    src: url(../src/assets/fonts/Oswald-Regular.ttf);
+}

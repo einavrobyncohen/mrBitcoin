@@ -1,0 +1,37 @@
+.app-header {
+    height: 10vh;
+    font-family: main-l;
+    letter-spacing: 1px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: 150px;
+    padding-inline-end: 150px;
+
+    .app-nav {
+        a:not(:last-of-type) {
+            margin-inline-end: 45px;
+        }
+    }
+
+    .myButton {
+        color: #FFFFFF;
+        text-shadow: 1px 1px 3px #243140;
+        box-shadow: 1px 1px 1px #E8E8E8;
+        padding: 2px 24px;
+        border-radius: 10px;
+        border: 1px solid #CFCFCF;
+        background: #BBC1C7;
+        background: linear-gradient(to top, #BBC1C7, #FFFFFF);
+      }
+      .myButton:hover {
+        color: #FFFFFF !important;
+        background: #FFFFFF;
+        background: linear-gradient(to top, #FFFFFF, #BBC1C7);
+      }
+    
+    
+            
+}

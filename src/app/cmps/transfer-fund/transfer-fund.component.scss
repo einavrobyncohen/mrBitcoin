@@ -1,0 +1,38 @@
+.transfer-fund {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        width: 180px;
+        height:23px;
+        border: none;
+        border-bottom: 1px solid white;
+        font-family: main-l;
+        padding-inline-start: 12px;
+        background-color: transparent;
+
+    }
+
+    .buttonClass {
+
+        cursor: pointer;
+        margin-left: 30px;
+        font-size:15px;
+        font-family:main-r;
+        width:110px;
+        height:30px;
+        border-width:1px;
+        color:#fff;
+        border-color:#eeb44f;
+        box-shadow:inset 0px 1px 0px 0px #fce2c1;
+        text-shadow:inset 0px 1px 0px #cc9f52;
+        background:linear-gradient(#ffc477, #fb9e25);
+      }
+      
+      .buttonClass:hover {
+        cursor: pointer;
+        background: linear-gradient(#fb9e25, #ffc477);
+      }
+}

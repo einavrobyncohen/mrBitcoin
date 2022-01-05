@@ -1,0 +1,5 @@
+<section class="contact-page">
+    <contact-filter></contact-filter>
+    <a class="add-btn" routerLink="edit"><img src="./assets/imgs/add.png"></a>
+    <contact-list (onRemove)="onRemoveContact($event)" [contacts]="contacts$ | async"></contact-list>
+</section>

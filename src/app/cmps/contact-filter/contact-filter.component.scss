@@ -1,0 +1,17 @@
+.contact-filter {
+    display: flex;
+    align-items: center;
+    label {
+        font-size: 18px;
+        color: #2d2d2d;
+    }
+
+    input {
+        padding:5px;
+        width: 200px;
+        margin-left: 15px;
+        background-color: rgba(255, 255, 255, 0.315);
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+}

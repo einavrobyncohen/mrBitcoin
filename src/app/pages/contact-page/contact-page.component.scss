@@ -1,0 +1,20 @@
+.add-btn {
+    z-index: 2;
+    background-color: #8D6DE6;
+    font-size: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 40px;
+    right: 160px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+    img {
+        position: absolute;
+        top: 7px;
+        left: 12px;
+        width: 50px;
+        height: 50px;
+    }
+}

@@ -1,0 +1,83 @@
+.signup {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+
+    .signup-box {
+        position: relative;
+        width: 400px;
+        height: 450px;
+        background-color: #8d6de57a;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+
+        img {
+            left: 125px;
+            position: absolute;
+            width: 140px;
+            height: 140px;
+        }
+
+        .header {
+            color: white;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                font-family: main-b;
+                font-size: 30px;
+            }
+
+            h1 {
+                font-family: main-l;
+            }
+
+            form {
+                margin-top: 40px;
+                input {
+                    padding: 5px;
+                    width: 200px;
+                    background-color: transparent;
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    border-radius: 20px;
+
+                }
+
+                .buttonClass {
+                    margin-top: 40px;
+                    margin-left: 40px;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    font-size:15px;
+                    font-family:main-r;
+                    width:110px;
+                    height:30px;
+                    border-width:1px;
+                    color:#fff;
+                    border-color:#eeb44f;
+                    border-top-left-radius:6px;
+                    border-top-right-radius:6px;
+                    border-bottom-left-radius:6px;
+                    border-bottom-right-radius:6px;
+                    box-shadow:inset 0px 1px 0px 0px #fce2c1;
+                    text-shadow:inset 0px 1px 0px #cc9f52;
+                    background:linear-gradient(#ffc477, #fb9e25);
+                  }
+                  
+                  .buttonClass:hover {
+                    cursor: pointer;
+                    background: linear-gradient(#fb9e25, #ffc477);
+                  }
+            }
+        }
+
+    }
+
+
+}

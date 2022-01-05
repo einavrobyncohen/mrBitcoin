@@ -1,0 +1,34 @@
+<section class="contact-details">
+    <div class="details">
+        <img src="https://robohash.org/{{contact._id}}?set=set3" alt="">
+        <div class="det-box">
+
+            <div class="det">
+                <img src="./assets/imgs/name.png" alt="">
+                <p>{{contact.name}}</p>
+            </div>
+            <div class="det">
+                <img src="./assets/imgs/email.png" alt="">
+                <p>{{contact.email}}</p>
+            </div>
+            <div class="det">
+                <img src="./assets/imgs/phone.png" alt="">
+                <p>{{contact.phone}}</p>
+            </div>
+
+            <transfer-fund [contact]="contact" [user]="user"></transfer-fund>
+
+        </div>
+        <section class="actions">
+            <button (click)="onBack()">Back</button>
+            <a [routerLink]="['/contact/edit',contact._id]">Edit</a>
+        </section>
+    </div>
+
+    <div class="contact-actions">
+
+        <moves-list [contact]="contact" [user]="user" ></moves-list>
+    </div>
+
+
+</section>

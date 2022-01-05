@@ -1,0 +1,13 @@
+<section [ngClass]="contact ? 'move-list' : 'last-moves'">
+    <div class="header">
+        <h1>{{!contact ? 'Your Last 3 Moves': 'Your Moves'}}</h1>
+    </div>
+    <div class="moves-container">
+        <ul class="moves">
+            <li class="move" *ngFor="let move of lastMoves">
+                <p>{{move.amount}} coins transferred to {{move.to}} </p>
+                <p>{{move.at|date: 'dd-MM-yyyy HH:mm'}}</p>
+            </li>
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+<section class="contact-edit">
+    <img *ngIf="!contact._id" src="./assets/imgs/user.png">
+    <img *ngIf="contact._id" src="https://robohash.org/{{contact._id}}?set=set3" alt="">
+
+    <form *ngIf="contact" (ngSubmit)="onSaveContact()">
+        <label for="name">Name</label>
+        <input [(ngModel)]="contact.name" type="text" name="name" id="name">
+
+        <label for="email">Email</label>
+        <input [(ngModel)]="contact.email" type="email" name="email" id="email">
+
+        <label for="phone">Phone</label>
+        <input [(ngModel)]="contact.phone" type="text" name="phone" id="phone">
+
+        <button class="buttonClass" *ngIf="contact._id">Edit Contact</button>
+        <button class="buttonClass" *ngIf="!contact._id">Add Contact</button>
+    </form>
+
+    
+    <a class="back" routerLink="">Back</a>
+</section>

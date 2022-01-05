@@ -1,0 +1,67 @@
+.home-page {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    .user-intro {
+       background-color: antiquewhite;
+    }
+
+    .right-hero {
+        img {
+            width:650px;
+            object-fit: contain;
+            height: 70vh;
+        }
+    }
+
+    .left-hero {
+        display: flex;
+        align-items: center;
+        color: white;
+
+        .header-no-user {
+            display: flex;
+            flex-direction: column;
+
+            h1:first-of-type {
+                font-size: 45px;
+                font-family: main-r;
+            
+            }
+
+            h1:nth-of-type(2) {
+                font-size: 45px;
+                font-family: main-b;
+                margin-bottom: 25px;
+            }
+
+            p {
+                font-size: 20px;
+                letter-spacing: 2px;
+                font-family: main-l;
+            }
+
+            .signup-btn {
+                text-align: center;
+                margin-top: 25px;
+                background-color: transparent;
+                font-family: main-r;
+                letter-spacing: 2px;
+                font-size: 20px;
+                color: white;
+                padding: 10px;
+                width: 20%;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.384);
+            }
+
+        }
+
+        .header-user {
+            .user-intro {
+                background-color: transparent;
+            }
+        }
+     
+    }
+}

@@ -1,0 +1,29 @@
+<section class="home-page">
+
+    <div class="right-hero">
+        <img src="./assets/imgs/hero.png">
+
+    </div>
+    <div class="left-hero">
+        <div *ngIf="!user" class="header-no-user">
+            <h1>The Future Is Here</h1>
+            <h1>And She's Crypto</h1>
+            <p>We at Mr. Bitcoin believe trading cryptocurrencies should be easy</p>
+            <p>Join us today to claim 100 free coins!</p>
+
+            <a routerLink="signup" class="signup-btn">Signup</a>
+        </div>
+        <div *ngIf="user" class="header-user header-no-user">
+
+            <h1>Welcome Back, {{user.name}}</h1>
+            <div class="user-intro">
+                <p>Coins: {{user.coins}}</p>
+                <p>BTC: {{bitcoinRate}}</p>
+            </div>
+
+            <moves-list [user]="user"></moves-list>
+
+        </div>
+
+    </div>
+</section>
