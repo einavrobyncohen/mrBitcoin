@@ -5,7 +5,7 @@
 
     </div>
     <div class="left-hero">
-        <div *ngIf="!user" class="header-no-user">
+        <div *ngIf="!user ; else headerUser" class="header-no-user">
             <h1>The Future Is Here</h1>
             <h1>And She's Crypto</h1>
             <p>We at Mr. Bitcoin believe trading cryptocurrencies should be easy</p>
@@ -13,17 +13,20 @@
 
             <a routerLink="signup" class="signup-btn">Signup</a>
         </div>
-        <div *ngIf="user" class="header-user header-no-user">
+        <ng-template #headerUser>
+            <div class="header-user  header-no-user">
 
-            <h1>Welcome Back, {{user.name}}</h1>
-            <div class="user-intro">
-                <p>Coins: {{user.coins}}</p>
-                <p>BTC: {{bitcoinRate}}</p>
+                <h1>Welcome Back, {{user.name}}</h1>
+                <div class="user-intro">
+                    <p>Coins: {{user.coins}}</p>
+                    <p>BTC: {{bitcoinRate$ | async}}</p>
+                </div>
+
+                <moves-list [user]="user"></moves-list>
+
             </div>
 
-            <moves-list [user]="user"></moves-list>
-
-        </div>
+        </ng-template>
 
     </div>
 </section>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user.model';
 import { BitcoinService } from 'src/app/services/bitcoin.service';
 import { UserService } from 'src/app/services/user.service';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'home-page',
@@ -12,32 +12,14 @@ import { Subscription } from 'rxjs';
 export class HomePageComponent implements OnInit {
   
   user: User 
-  bitcoinRate: any
+  bitcoinRate$: Observable<number>
   userSubscriber: Subscription
 
   constructor(private userService: UserService, private bitcoinService: BitcoinService) { }
 
-  async ngOnInit(): Promise<any> {
-    // this.setUser()
-    if (this.user) {
-      
-      // let currBtcRate = await this.bitcoinService.getRate(+this.user.coins).toPromise()
-      // this.bitcoinService.getRate.subscribe()
-      // this.bitcoinService.getRate.subscribe((rate) => this.bitcoinRate = +(1 / rate).toFixed(2));
-
-    }
-
-    this.bitcoinRate = (1 / 0.00210407).toFixed(2)
-    let marketPrice = await this.bitcoinService.getMarketPrice().toPromise()
-
-
+  ngOnInit() {
+      this.bitcoinRate$ = (this.user)? this.bitcoinService.getRate(this.user.coins) : this.bitcoinService.getRate(100)
     this.userSubscriber = this.userService.user$.subscribe(user => this.user = user)
-    console.log(this.user)
   }
-
-  // setUser() {
-  //   let currUser = this.userService.getUser()
-  //   this.user = currUser
-  // }
 
 }

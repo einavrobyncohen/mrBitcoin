@@ -10,7 +10,8 @@ export class BitcoinService {
   constructor(private http: HttpClient) { }
 
   getRate(coins: Number) {
-    return this.http.get<number>(`https://blockchain.info/tobtc?currency=USD&value=1`);
+    return this.http.get<number>(`https://blockchain.info/tobtc?currency=USD&value=${coins}`)
+      .pipe(map(res=> res));
   }
 
   getMarketPrice() {

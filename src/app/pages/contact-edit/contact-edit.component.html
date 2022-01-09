@@ -1,6 +1,8 @@
 <section class="contact-edit">
-    <img *ngIf="!contact._id" src="./assets/imgs/user.png">
-    <img *ngIf="contact._id" src="https://robohash.org/{{contact._id}}?set=set3" alt="">
+    <img *ngIf="!contact._id ; else contactImg" src="./assets/imgs/user.png">
+    <ng-template #contactImg>
+        <img src="https://robohash.org/{{contact._id}}?set=set3" alt="">
+    </ng-template>
 
     <form *ngIf="contact" (ngSubmit)="onSaveContact()">
         <label for="name">Name</label>
@@ -12,8 +14,11 @@
         <label for="phone">Phone</label>
         <input [(ngModel)]="contact.phone" type="text" name="phone" id="phone">
 
-        <button class="buttonClass" *ngIf="contact._id">Edit Contact</button>
-        <button class="buttonClass" *ngIf="!contact._id">Add Contact</button>
+        <button class="buttonClass" *ngIf="contact._id ; else addContact">Edit Contact</button>
+        <ng-template #addContact>
+            <button class="buttonClass">Add Contact</button>
+        </ng-template>
+        
     </form>
 
     
