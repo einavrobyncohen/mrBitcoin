@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 import { ChartComponent } from './pages/chart/chart.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
@@ -9,12 +10,12 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { ContactResolverService } from './services/contact-resolver.service';
 
 const routes: Routes = [
-  {path: 'contact', component: ContactPageComponent},
-  {path: 'contact/edit', component: ContactEditComponent},
-  {path: 'contact/:id', component: ContactDetailsComponent, resolve: {contact: ContactResolverService}},
-  {path: 'contact/edit/:id', component: ContactEditComponent},
+  {path: 'contact', component: ContactPageComponent , canActivate:[AuthGuard]},
+  {path: 'contact/edit', component: ContactEditComponent , canActivate:[AuthGuard]},
+  {path: 'contact/:id', component: ContactDetailsComponent, resolve: {contact: ContactResolverService} , canActivate:[AuthGuard]},
+  {path: 'contact/edit/:id', component: ContactEditComponent , canActivate:[AuthGuard]},
   {path: 'signup', component: SignupComponent},
-  {path: 'chart', component: ChartComponent},
+  {path: 'chart', component: ChartComponent , canActivate:[AuthGuard]},
   {path: '', component: HomePageComponent}
 
 ];
